@@ -22,6 +22,7 @@ juguete(seniorCaraDePapa,caraDePapa([original(pieIzquierdo),original(pieDerecho)
 % Dice si un juguete es raro
 esRaro(deAccion(stacyMalibu, 1, [sombrero])).
 
+
 % Dice si una persona es coleccionista
 esColeccionista(sam).
 
@@ -95,7 +96,7 @@ todasSusPiezasSonOriginales(Juguete):-
     partes(Forma, Partes),
     forall(member(Parte, Partes), esOriginal(Parte)).
 
-partes(deTrapo(_),[]). %Preguntar esto -> Funciona, pero semánticamente quizá no es lo mejor
+partes(deTrapo(_),[]). %Sin esto, todos los de trapo 
 partes(deAccion(_,Partes),Partes).
 partes(miniFiguras(_,Partes),Partes).
 partes(caraDePapa(Partes),Partes).
