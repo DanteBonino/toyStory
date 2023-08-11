@@ -45,6 +45,14 @@ esDePlastico(Juguete):-
 formasDePlastico(miniFiguras).
 formasDePlastico(caraDePapa).
 
+%Otra forma:
+esDePlasticoV2(Juguete):-
+    juguete(Juguete,Forma),
+    formaDePlasticoV2(Forma).
+
+formaDePlasticoV2(miniFiguras(_,_)).
+formaDePlasticoV2(caraDePapa(_)).
+
 %c)
 esDeColeccion(Juguete):-
     juguete(Juguete,FormaJuguete),
