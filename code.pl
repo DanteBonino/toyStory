@@ -2,8 +2,8 @@
 % Relaciona al dueño con el nombre del juguetey la cantidad de años que lo ha tenido
 duenio(andy, woody, 8).
 duenio(sam, jessie, 3).
-duenio(sacatronic, soldados,20).
-duenio(sacatronic, monitosEnBarril, 50).
+duenio(dante, soldados,20).
+duenio(dante, monitosEnBarril, 50).
 
 
 % Relaciona al juguete con su nombre
@@ -96,7 +96,7 @@ todasSusPiezasSonOriginales(Juguete):-
     partes(Forma, Partes),
     forall(member(Parte, Partes), esOriginal(Parte)).
 
-partes(deTrapo(_),[]). %Sin esto, todos los de trapo 
+partes(deTrapo(_),[]). %Sin esto, todos los de trapo dan false a todasSusPiezasOriginales
 partes(deAccion(_,Partes),Partes).
 partes(miniFiguras(_,Partes),Partes).
 partes(caraDePapa(Partes),Partes).
